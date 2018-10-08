@@ -5,6 +5,11 @@
   <% end %>
 
   <!-- Right Navigation -->
+  <%= link_to "Informatie", informatie_path %>
+  <%= link_to "Contact", contact_path %>
+  <%= link_to "Psychiaters", psychiaters_path %>
+  <%= link_to "Lidmaatschap", lidmaatschap_path %>
+  <%= link_to "Klachten", klachten_path %>
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
     <% if user_signed_in? %>
