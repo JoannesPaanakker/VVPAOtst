@@ -14,3 +14,9 @@ rails g controller images
 
 rails g model Newsitem title:string content:text imagefilename1:string
 rails g controller newsitems
+
+rails g model Training title:string description:text start_date:datetime end_date:datetime
+rails g controller trainings
+
+rails g model Usertraining
+rails g controller usertrainings

@@ -1,3 +1,3 @@
-class Targetaudience < ApplicationRecordApplicationRecord
+class Targetaudience < ApplicationRecord
   has_many :users
 end
