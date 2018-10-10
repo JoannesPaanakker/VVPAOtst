@@ -1,3 +1,18 @@
-<h1>Pages#nascholing</h1>
-
+<div class="page-header header1">
+  Nascholingen
+</div>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="col-xs-12 col-sm-10 col-md-8 page-box">
+      <ul>
+        <% @trainings.each do |tr| %>
+            <li> <div class="header2"><%= tr.title %></div>
+              <%= tr.description %> <br>
+organiser:
+              <%= tr.user.first_name %> <%= tr.user.last_name %>  </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
 <%= link_to "terug", root_path, class: "knop knop-linksonder" %>

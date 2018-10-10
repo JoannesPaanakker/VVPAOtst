@@ -5,6 +5,7 @@ class PagesController < ApplicationController
     @texts = Text.all
     @listitems = Listitem.all
     @newsitems = Newsitem.all
+    @trainings = Training.all
   end
 
   def informatie
@@ -15,6 +16,7 @@ class PagesController < ApplicationController
   def nascholing
     @texts = Text.all
     @listitems = Listitem.all
+    @trainings = Training.all
   end
 
   def psychiaters
