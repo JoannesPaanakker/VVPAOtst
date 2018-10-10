@@ -1,1 +1,36 @@
-<h1>Pages#informatie</h1>
+<div class="page-header header1">
+  Welkom bij de <%= @texts[0].name  %>.
+</div>
+
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="col-xs-12 col-sm-10 col-md-8 page-box">
+      <%= @texts[0].text %>
+      <div class="header2">
+        <%=  @texts[3].name %>
+      </div>
+        <%=  @texts[3].text %>
+      <ul>
+        <% @listitems.each do |li| %>
+          <% if li.text_id == @texts[3].id %>
+            <li> <%= li.text %> </li>
+          <% end %>
+        <% end %>
+      </ul>
+      <div class="header2">
+        <%=  @texts[4].name %>
+      </div>
+      <ul>
+        <% @listitems.each do |li| %>
+          <% if li.text_id == @texts[4].id %>
+            <li> <%= li.text %> </li>
+          <% end %>
+        <% end %>
+      </ul>
+      <div class="header2"><%= @texts[2].name  %></div>
+      <%= @texts[2].text %>
+    </div>
+  </div>
+</div>
+<%= link_to "terug", root_path, class: "knop knop-linksonder" %>

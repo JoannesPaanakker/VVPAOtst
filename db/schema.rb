@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181009141351) do
+ActiveRecord::Schema.define(version: 20181010101021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(version: 20181009141351) do
     t.string "filename"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "listitems", force: :cascade do |t|
+    t.text "text"
+    t.integer "level", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "text_id"
+    t.index ["text_id"], name: "index_listitems_on_text_id"
   end
 
   create_table "newsitems", force: :cascade do |t|
@@ -112,6 +121,7 @@ ActiveRecord::Schema.define(version: 20181009141351) do
     t.index ["user_id"], name: "index_usertrainings_on_user_id"
   end
 
+  add_foreign_key "listitems", "texts"
   add_foreign_key "newsitems", "users"
   add_foreign_key "trainings", "users", column: "organiser_id"
   add_foreign_key "users", "expertises"

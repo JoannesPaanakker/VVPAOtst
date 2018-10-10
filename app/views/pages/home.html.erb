@@ -1,2 +1,53 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="col-xs-12 col-md-6 home-box">
+      <div class="home-inner-box">
+        <div class="header1">  <%= @texts[0].name  %></div>
+        <%= @texts[0].text %>
+        <%= link_to "meer info", informatie_path, class: "knop knop-linksonder" %>
+        <!-- <div class="knop knop-linksonder">meer</div> -->
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-6 home-box">
+      <div class="home-inner-box">
+        <div class="inner-box" style="position: relative;">
+          <div class="header2">Psychiaters</div>Hier kunt u zoeken naar Psychiaters die zijn aangesloten bij de VVPAO Amsterdam.
+          <%= link_to "Vind psychiater", psychiaters_path, class: "knop knop-linksonder-home-inner-box" %>
+        </div>
+        <div class="inner-box" style="position: relative;"">
+          <div class="header2">Lidmaatschap</div>
+          Lid worden van de VVPAO kan wanneer men vrijgevestigd psychiater is, binnen, maar ook buiten Amsterdam, zich ooit vrij wil vestigen (dus elke psychiater die het overweegt) of in opleiding is tot psychiater.
+        <%= link_to "lidmaatschap", lidmaatschap_path, class: "knop knop-linksonder-home-inner-box" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-6 home-box">
+      <div class="home-inner-box">
+        <div class="inner-box">
+          <div class="header2">Nascholing</div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-6 home-box">
+      <div class="home-inner-box">
+          <div class="header2">Nieuws</div>
+          <% @newsitems.each do |ni| %>
+            <div class="news-item-index">
+
+                <%= image_tag ni.imagefilename1, class: "news-item-image"   %>
+
+              <div class="news-item-title">
+                <%= ni.title  %>
+              </div>
+            </div>
+          <% end %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-6 home-box">
+      <div class="home-inner-box">
+        <div class="header1"><%= @texts[1].name  %></div>
+        <%= @texts[1].text %>
+        <%= link_to "Klachten", klachten_path, class: "knop knop-linksonder" %>
+    </div>
+  </div>
+</div>

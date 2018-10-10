@@ -16,4 +16,6 @@ rails g migration AddTrainingToUsertraining training:references
 
 rails g migration AddUserToNewsitem user:references
 rails g migration AddOrganiserToTraining user:references
+rails g migration AddTextToListitem text:references
+
 

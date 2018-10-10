@@ -1,1 +1,39 @@
-<h1>Pages#psychiaters</h1>
+<div class="page-header header1">
+  Psychiaters Amsterdam en Omstreken
+</div>
+
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="col-xs-12 col-md-6 page-box">
+      Hier kunt u zoeken naar Psychiaters die zijn aangesloten bij de VVPAO Amsterdam.
+      <div>
+        <form action="">
+          Postcode:   <input type="text" name="postcode" value=""placeholder="1234AA"><br><br>
+          Naam:   <input type="text" name="city" value="" placeholder="naam"><br><br>
+          Expertise:
+          <select name="" id="">
+            <% @expertises.each do |e| %>
+              <option value=""><%= e.name %></option>
+            <% end %>
+          </select>
+          <br>
+          <br>
+          <br>
+          <input type="submit" value="ZOEK" class="knop">
+        </form>
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-6 page-box">
+      <ul>
+        <% @users.each do |u| %>
+        <li>
+          <%= u.first_name  %> <%= u.last_name  %>, <%= u.city  %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<%= link_to "terug", root_path, class: "knop knop-linksonder" %>

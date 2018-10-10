@@ -1,1 +1,42 @@
 // Specific CSS for your home-page
+.home-box {
+  height: 500px;
+}
+
+.home-inner-box {
+  width: 100%;
+  height: 100%;
+  border-left: solid 6px $green2;
+  border-bottom: solid 6px $green2;
+  border-radius: 10px;
+}
+
+.inner-box {
+  margin: 0% 0% 5% 0%;
+  width: 100%;
+  height: 45%;
+  padding: 0px 25px 10px 25px;
+  border-right: solid 2px $green2;
+  border-top: solid 2px $green2;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 601px) {
+  .home-box {
+    padding: 20px;
+  }
+
+  .home-inner-box {
+    padding: 10px 25px 10px 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home-box {
+    padding: 5px;
+  }
+
+  .home-inner-box {
+    padding: 5px 10px 5px 10px;
+  }
+}

@@ -20,3 +20,5 @@ rails g controller trainings
 
 rails g model Usertraining
 rails g controller usertrainings
+
+rails g model listitems text:text level:integer

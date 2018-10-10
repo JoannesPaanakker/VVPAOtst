@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'klachten', to: 'pages#klachten'
   get 'nieuws', to: 'pages#nieuws'
   get 'contact', to: 'pages#contact'
+  get 'apply', to: 'pages#apply'
 end
 
 
