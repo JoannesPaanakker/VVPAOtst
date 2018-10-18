@@ -1,0 +1,39 @@
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 160px;
+  min-height: 100%;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 25px 40px 10px 35px;
+  background: $green2;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-text-blok {
+  padding: 0px 10px 0px 10px;
+}
+
+.info-header-foot {
+  font-weight: 700;
+}
+
+a .info-header-foot-text {
+  text-decoration: underline;
+}
+
+.footer-list {
+  padding: 15px 0px 15px 20px;
+  background: $green2;
+}
