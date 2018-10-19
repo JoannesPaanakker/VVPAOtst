@@ -297,7 +297,7 @@ De VVPAO is wel beschikbaar als gesprekspartner voor maatschappelijke partijen d
   },
   {
     name: 'Klachtencommissie',
-    text: 'De VVPAO neemt deel aan de Klachtencommissie Arkin en GGZinGeest. Twee leden van de VVPAO hebben zitting in de klachtencommissie. De VVPAO verspreid relevante informatie per mail onder haar leden en probeert antwoorden te vinden op vragen van haar leden.'
+    text: 'Indien u een klacht heeft over een psychiater dan kunt u die het beste eerst met de psychiater zelf bespreken.<br>Als dat voor u niet voldoende oplevert kunt u schriftelijk een klacht indienen bij onderstaande klachtencommissie en een afschrift sturen naar de psychiater.<br><br>Klachtencommissie Arkin en GGZinGeest<br>Margreet Spreij, ambtelijk secretaris<br>Postbus 74077<br>1070 BB Amsterdam<br><br>telefoonnummer 020 7885140<br>fax 020 7885141<br>email: klachtencie@ggzingeest.nl<br>of m.spreij@ggzingeest.nl<br> <br>De klachtencommissie wordt per klacht samengesteld uit de leden die worden afgevaardigd door de samenstellende instellingen en vereniging, op dit moment Arkin, GGZin Geest en de VVPAO. Vanuit de VVPAO zijn twee leden afgevaardigd. Bij een klacht tegen een vrijgevestigd psychiater wordt een commissie samengesteld. Daarin zullen geen leden van de VVPAO zitting hebben.<br><br>Leden van de klachtencommissie declareren hun uren. De kosten van de klacht komen voor rekening van de psychiater waartegen de klacht is ingediend. <br><br>Op dit moment hebben namens de VVPAO zitting in de klachtencommissie: Alex Kolman en Pieter Rood.<br><br>Wij allen zijn hen zeer erkentelijk voor hun bijdrage aan de VVPAO.<br><br>Jaarverslagen Klachtencommissie Arkin en GGZinGeest zijn op te vragen bij het secretariaat van de klachtencommissie.<br>'
   },
   {
     name: 'Conflict of Interest',
@@ -369,4 +369,3 @@ listitems = Listitem.create([
 ])
 
 p "seeds done"
-p Newsitem.all

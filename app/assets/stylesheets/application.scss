@@ -28,11 +28,13 @@ body {
 }
 
 .header1 {
+  margin-bottom: 5px;
   font-family: $headers-font;
 }
 
 .header2 {
   margin-top: 10px;
+  margin-bottom: 5px;
   font-family: $headers-font;
 }
 
@@ -42,7 +44,7 @@ body {
   }
 
   .header1 {
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .header2 {
@@ -88,7 +90,7 @@ body {
 
 .knop-linksonder {
   position: absolute;
-  left: 30px;
+  left: 35px;
   bottom: 180px;
 }
 

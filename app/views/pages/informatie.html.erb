@@ -1,9 +1,9 @@
-<div class="page-header header1">
+<div id="info" class="page-header header1">
   Welkom bij de <%= @texts[0].name  %>.
 </div>
-<div class="container-fluid sub-page">
+<div class="container-fluid">
   <div class="row-fluid">
-    <div class="col-xs-12 col-sm-10 col-md-8 page-box">
+    <div class="col-xs-12 col-sm-10 col-md-8">
       <%= @texts[0].text %>
       <div class="header2">
         <%=  @texts[3].name %>
@@ -31,4 +31,37 @@
     </div>
   </div>
 </div>
+<div id="bestuur" class="page-header header1">
+  Bestuur
+</div>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="col-xs-12 col-sm-10 col-md-8">
+      <div class="header2">
+      </div>
+      <div class="header2">
+      </div>
+      <div class="header2">
+      </div>
+    </div>
+  </div>
+</div>
+<div id="links" class="page-header header1">
+  Links
+</div>
+<div class="container-fluid sub-page">
+  <div class="row-fluid">
+    <div class="col-xs-12 col-sm-10 col-md-8 page-box">
+      <div class="header2">
+      </div>
+      <div class="header2">
+      </div>
+      <div class="header2">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <%= link_to "terug", root_path, class: "knop knop-linksonder" %>

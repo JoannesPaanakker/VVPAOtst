@@ -9,6 +9,15 @@
   justify-content: space-between;
 }
 
+.dropdown-toggle {
+  color: $base;
+}
+
+.dropdown-toggle:hover {
+  color: white;
+  cursor: pointer;
+}
+
 .fa-size {
   font-size: 30px;
 }
