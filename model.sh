@@ -22,3 +22,7 @@ rails g model Usertraining
 rails g controller usertrainings
 
 rails g model listitems text:text level:integer
+rails g model bestuur role:string
+
+rails g model link url:string description:string
+rails g model category description:string

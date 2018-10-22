@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181010101021) do
+ActiveRecord::Schema.define(version: 20181022105731) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bestuurs", force: :cascade do |t|
+    t.string "role"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_bestuurs_on_user_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "expertises", force: :cascade do |t|
     t.string "name"
@@ -26,6 +41,15 @@ ActiveRecord::Schema.define(version: 20181010101021) do
     t.string "filename"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "links", force: :cascade do |t|
+    t.string "url"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_links_on_category_id"
   end
 
   create_table "listitems", force: :cascade do |t|
@@ -121,6 +145,8 @@ ActiveRecord::Schema.define(version: 20181010101021) do
     t.index ["user_id"], name: "index_usertrainings_on_user_id"
   end
 
+  add_foreign_key "bestuurs", "users"
+  add_foreign_key "links", "categories"
   add_foreign_key "listitems", "texts"
   add_foreign_key "newsitems", "users"
   add_foreign_key "trainings", "users", column: "organiser_id"

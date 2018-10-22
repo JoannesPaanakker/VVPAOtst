@@ -18,4 +18,6 @@ rails g migration AddUserToNewsitem user:references
 rails g migration AddOrganiserToTraining user:references
 rails g migration AddTextToListitem text:references
 
+rails g migration AddUserToBestuur user:references
 
+rails g migration AddCategoryToLink category:references

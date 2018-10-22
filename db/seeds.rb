@@ -1,5 +1,8 @@
 p "seeds started"
 
+Link.destroy_all
+Category.destroy_all
+Bestuur.destroy_all
 Listitem.destroy_all
 Text.destroy_all
 Newsitem.destroy_all
@@ -122,6 +125,99 @@ expertises = Expertise.create([
 ])
 
 users = User.create([
+  {
+    email: 'voorzitter@vvpao.amsterdam',
+    first_name: 'Celestine',
+    last_name: 'Roose',
+    password: '123456',
+    initials: 'C',
+    street: '',
+    streetnumber: '',
+    number_extension: '',
+    postalcode: '',
+    city: '',
+    country: 'NL',
+    phonenumber: '',
+    practice_name: '',
+    practice_street: '',
+    practice_streetnumber: '',
+    practice_number_extension: '',
+    practice_postalcode: '',
+    practice_city: '',
+    practice_country: '',
+    practice_email: '',
+    practice_phonenumber: '',
+    website: '',
+    admin: true,
+    member: true,
+    profile_image_filename: 'https://res.cloudinary.com/hrscywv4p/image/upload/c_limit,fl_lossy,h_1440,w_720,f_auto,q_auto/v1/181423/2cc6be79-0736-4751-a988-2048cb3b3bd4_zpscqn.png',
+    newregistrations: true,
+    waitingperiod: '',
+    expertise_id: expertises[5].id,
+    targetaudience_id: targetaudiences[0].id
+  },
+  {
+    email: 'bestuurslidjokhoe@vvpao.amsterdam',
+    first_name: 'Roshad',
+    last_name: 'Jokhoe',
+    password: '123456',
+    initials: '',
+    street: '',
+    streetnumber: '',
+    number_extension: '',
+    postalcode: '',
+    city: '',
+    country: '',
+    phonenumber: '',
+    practice_name: '',
+    practice_street: '',
+    practice_streetnumber: '',
+    practice_number_extension: '',
+    practice_postalcode: '',
+    practice_city: '',
+    practice_country: '',
+    practice_email: '',
+    practice_phonenumber: '',
+    website: '',
+    admin: true,
+    member: true,
+    profile_image_filename: 'https://res.cloudinary.com/hrscywv4p/image/upload/c_limit,fl_lossy,h_1440,w_720,f_auto,q_auto/v1/181423/a9dc2913-4f9f-4f8e-a043-172cbe300d63_wnhtct.png',
+    newregistrations: true,
+    waitingperiod: '',
+    expertise_id: expertises[5].id,
+    targetaudience_id: targetaudiences[0].id
+  },
+  {
+    email: 'penningmeester@vvpao.amsterdam',
+    first_name: 'Kees',
+    last_name: 'de Vries',
+    password: '123456',
+    initials: '',
+    street: '',
+    streetnumber: '',
+    number_extension: '',
+    postalcode: '',
+    city: '',
+    country: '',
+    phonenumber: '',
+    practice_name: '',
+    practice_street: '',
+    practice_streetnumber: '',
+    practice_number_extension: '',
+    practice_postalcode: '',
+    practice_city: '',
+    practice_country: '',
+    practice_email: '',
+    practice_phonenumber: '',
+    website: '',
+    admin: true,
+    member: true,
+    profile_image_filename: 'https://res.cloudinary.com/hrscywv4p/image/upload/c_limit,fl_lossy,h_1440,w_720,f_auto,q_auto/v1/181423/c6c029b8-9692-4f8e-84ec-9cf2947a2e0e_jayxbw.png',
+    newregistrations: true,
+    waitingperiod: '',
+    expertise_id: expertises[5].id,
+    targetaudience_id: targetaudiences[0].id
+  },
   {
     email: 'admin@vvpao.ams',
     first_name: 'Jan',
@@ -367,5 +463,89 @@ listitems = Listitem.create([
     text_id: texts[4].id
   },
 ])
+
+bestuurs = Bestuur.create ([
+  {
+    role: 'chair',
+    description: 'Voorzitter',
+    user_id: users[0].id
+  },
+  {
+    role: 'member',
+    description: 'Nascholing, software, softwaregroepen, Stedelijk Overleg',
+    user_id: users[1].id
+  },
+  {
+    role: 'treasurer',
+    description: 'Penningmeester',
+    user_id: users[2].id
+  }
+])
+
+categories = Category.create ([
+  {
+    description: 'Verenigingen voor Vrijgevestigde Psychiaters'
+  },
+  {
+    description: 'Verzekeraars'
+  },
+  {
+    description: 'Overig'
+  }
+])
+
+links = Link.create ([
+  {
+    url: 'http://www.vvpao.nl/',
+    description: 'VVP Alkmaar en omstreken',
+    category_id: categories[0].id
+  },
+  {
+    url: 'https://www.psychiaters-utrecht.nl/',
+    description: 'VVP Utrecht',
+    category_id: categories[0].id
+  },
+  {
+    url: 'https://vrijengevestigd.praktijkinfo.nl/',
+    description: 'VVP Nijmegen',
+    category_id: categories[0].id
+  },
+  {
+    url: 'https://www.achmea.nl/Paginas/default.aspx',
+    description: 'Achmea/ AGIS',
+    category_id: categories[1].id
+  },
+  {
+    url: 'https://www.cooperatievgz.nl/cooperatie-vgz',
+    description: 'VGZ',
+    category_id: categories[1].id
+  },
+  {
+    url: 'https://www.menzis.nl/',
+    description: 'Menzis',
+    category_id: categories[1].id
+  },
+  {
+    url: 'https://www.zorgenzekerheid.nl/',
+    description: 'Zorg en Zekerheid',
+    category_id: categories[1].id
+  },
+  {
+    url: 'https://www.cz.nl/',
+    description: 'CZ / OHRA / Delta Lloyd',
+    category_id: categories[1].id
+  },
+  {
+    url: 'https://www.defriesland.nl/consumenten/default.aspx',
+    description: 'De Friesland',
+    category_id: categories[1].id
+  },
+  {
+    url: 'https://www.nvvp.net/zelfstandig-gevestigde-psychiaters',
+    description: 'Nederlandse Vereniging voor Psychiatrie',
+    category_id: categories[2].id
+  }
+])
+
 
 p "seeds done"

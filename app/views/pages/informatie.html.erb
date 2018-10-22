@@ -38,11 +38,52 @@
   <div class="row-fluid">
     <div class="col-xs-12 col-sm-10 col-md-8">
       <div class="header2">
+        <%= @chair.description %>
+      </div>
+      <div class="user-index">
+        <div class="user-image">
+          <%= image_tag( @chair.user.profile_image_filename , class: "user-image", alt: "Foto persoon")  %>
+        </div>
+        <div class="user-data">
+          <%= @chair.user.first_name %> <%= @chair.user.last_name %>
+          <br>
+          <div class="email">
+            <%= mail_to @chair.user.email %>
+          </div>
+        </div>
       </div>
       <div class="header2">
+        <%= @treasurer.description %>
       </div>
-      <div class="header2">
+      <div class="user-index">
+        <div class="user-image">
+          <%= image_tag( @treasurer.user.profile_image_filename , class: "user-image", alt: "Foto persoon")  %>
+        </div>
+        <div class="user-data">
+          <%= @treasurer.user.first_name %> <%= @treasurer.user.last_name %>
+          <br>
+          <div class="email">
+            <%= mail_to @treasurer.user.email%>
+          </div>
+        </div>
       </div>
+      <% @bestuursleden.each do |bl| %>
+        <div class="header2">
+          <%= bl.description  %>
+        </div>
+        <div class="user-index">
+          <div class="user-image">
+            <%= image_tag( bl.user.profile_image_filename , class: "user-image", alt: "Foto persoon")  %>
+          </div>
+          <div class="user-data">
+            <%= bl.user.first_name %> <%= bl.user.last_name %>
+            <br>
+            <div class="email">
+              <%= mail_to bl.user.email %>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
@@ -52,12 +93,19 @@
 <div class="container-fluid sub-page">
   <div class="row-fluid">
     <div class="col-xs-12 col-sm-10 col-md-8 page-box">
-      <div class="header2">
-      </div>
-      <div class="header2">
-      </div>
-      <div class="header2">
-      </div>
+      <% @categories.each do |cat| %>
+        <div class="header2">
+          <%= cat.description %>
+        </div>
+        <ul>
+          <% @links = Link.where(category_id: cat.id) %>
+          <% @links.each do |lk| %>
+            <li>
+              <%= lk.description %>: <span class="link"> <%= link_to lk.url, lk.url %> </span>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
     </div>
   </div>
 </div>

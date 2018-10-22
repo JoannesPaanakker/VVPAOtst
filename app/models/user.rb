@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_one :expertise
   has_one :targetaudience
+  has_one :bestuur
   has_many :newsitems
   has_many :usertrainings
   has_many :trainings, through: :usertrainings

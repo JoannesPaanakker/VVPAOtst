@@ -11,6 +11,10 @@ class PagesController < ApplicationController
   def informatie
     @texts = Text.all
     @listitems = Listitem.all
+    @chair = Bestuur.where(role: "chair")[0]
+    @treasurer = Bestuur.where(role: "treasurer")[0]
+    @bestuursleden = Bestuur.where(role: "member")
+    @categories = Category.all
   end
 
   def nascholing
