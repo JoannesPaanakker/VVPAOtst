@@ -3,62 +3,125 @@
 en:
   devise:
     confirmations:
-      confirmed: "Your email address has been successfully confirmed."
-      send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
-      send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
+      confirmed: Uw e-mailadres is bevestigd.
+      send_instructions: U ontvangt binnen enkele minuten via e-mail instructies om uw account te bevestigen.
+      send_paranoid_instructions: Als uw e-mailadres bestaat in de database, ontvangt u binnen enkele minuten via e-mail instructies om uw account te bevestigen.
     failure:
-      already_authenticated: "You are already signed in."
-      inactive: "Your account is not activated yet."
-      invalid: "Invalid %{authentication_keys} or password."
-      locked: "Your account is locked."
-      last_attempt: "You have one more attempt before your account is locked."
-      not_found_in_database: "Invalid %{authentication_keys} or password."
-      timeout: "Your session expired. Please sign in again to continue."
-      unauthenticated: "You need to sign in or sign up before continuing."
-      unconfirmed: "You have to confirm your email address before continuing."
+      already_authenticated: U bent reeds ingelogd.
+      inactive: Uw account is nog niet geactiveerd.
+      invalid: Ongeldig %{authentication_keys} of wachtwoord.
+      locked: Uw account is vergrendeld.
+      last_attempt: U hebt nog één poging over voordat uw account vergrendeld wordt.
+      not_found_in_database: Ongeldig %{authentication_keys} of wachtwoord.
+      timeout: Uw sessie is verlopen. Log alstublieft opnieuw in om door te gaan.
+      unauthenticated: U dient in te loggen om door te gaan.
+      unconfirmed: U dient eerst uw account te bevestigen.
     mailer:
       confirmation_instructions:
-        subject: "Confirmation instructions"
+        subject: Bevestiging e-mailadres
       reset_password_instructions:
-        subject: "Reset password instructions"
+        subject: Wachtwoord resetten
       unlock_instructions:
-        subject: "Unlock instructions"
+        subject: Ontgrendelinstructies
       email_changed:
-        subject: "Email Changed"
+        subject: E-mailadres gewijzigd
       password_change:
-        subject: "Password Changed"
+        subject: Wachtwoord gewijzigd
     omniauth_callbacks:
-      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
-      success: "Successfully authenticated from %{kind} account."
+      failure: Kon niet aanmelden met uw %{kind}-account, omdat "%{reason}".
+      success: Successvol aangemeld met uw %{kind}-account.
     passwords:
-      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
-      send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
-      send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
-      updated: "Your password has been changed successfully. You are now signed in."
-      updated_not_active: "Your password has been changed successfully."
+      no_token: U kunt deze pagina enkel benaderen vanuit een wachtwoord-reset-e-mail. Als u vanuit zo'n e-mail komt, vergewis u er dan van dat u de volledige URL gebruikt hebt.
+      send_instructions: U ontvangt via e-mail instructies om uw wachtwoord te resetten.
+      send_paranoid_instructions: Als uw e-mailadres bij ons bekend is, ontvangt u binnen enkele minuten via e-mail instructies om een nieuw wachtwoord in te stellen.
+      updated: Uw wachtwoord is gewijzigd. U bent nu ingelogd.
+      updated_not_active: Uw wachtwoord is gewijzigd.
     registrations:
-      destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
-      signed_up: "Welcome! You have signed up successfully."
-      signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
-      signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
-      signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please follow the link to activate your account."
-      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirm link to confirm your new email address."
-      updated: "Your account has been updated successfully."
+      destroyed: Uw account is verwijderd.
+      signed_up: Welkom! U bent inschreven.
+      signed_up_but_inactive: U bent inschreven. U kon nog niet ingelogd worden, omdat uw account nog niet geactiveerd is.
+      signed_up_but_locked: U bent inschreven. U kon nog niet ingelogd worden, omdat uw account vergrendeld is.
+      signed_up_but_unconfirmed: U ontvangt via e-mail instructies om uw account te activeren. Volg de link in de mail om uw account te activeren.
+      update_needs_confirmation: U hebt uw e-mailadres succesvol gewijzigd, maar we moeten uw nieuwe e-mailadres nog verifiëren. Controleer uw e-mail en volg de link in de mail om uw adres te verifiëren.
+      updated: Uw accountgegevens zijn opgeslagen.
     sessions:
-      signed_in: "Signed in successfully."
-      signed_out: "Signed out successfully."
-      already_signed_out: "Signed out successfully."
+      signed_in: U bent succesvol ingelogd.
+      signed_out: U bent succesvol uitgelogd.
+      already_signed_out: U bent succesvol uitgelogd.
     unlocks:
-      send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
-      send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
-      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+      send_instructions: U ontvangt via e-mail instructies om uw account te ontgrendelen.
+      send_paranoid_instructions: Als uw e-mailadres bij ons bekend is, ontvangt u via e-mail instructies om uw account te ontgrendelen.
+      unlocked: Uw account is ontgrendeld. U kunt nu weer inloggen.
   errors:
     messages:
-      already_confirmed: "was already confirmed, please try signing in"
-      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
-      expired: "has expired, please request a new one"
-      not_found: "not found"
-      not_locked: "was not locked"
+      already_confirmed: is reeds bevestigd, probeer in te loggen
+      confirmation_period_expired: moet bevestigd worden binnen %{period}, vraag alstublieft een nieuw aan
+      expired: is verlopen, vraag alstublieft een nieuw aan
+      not_found: niet gevonden
+      not_locked: is niet vergrendeld
       not_saved:
-        one: "1 error prohibited this %{resource} from being saved:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+        one: "Door 1 fout kan deze %{resource} niet opslagen worden:"
+        other: "Door %{count} fouten kan deze %{resource} niet opslagen worden:"
+
+
+  # devise:
+  #   confirmations:
+  #     confirmed: "Your email address has been successfully confirmed."
+  #     send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
+  #     send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
+  #   failure:
+  #     already_authenticated: "You are already signed in."
+  #     inactive: "Your account is not activated yet."
+  #     invalid: "Invalid %{authentication_keys} or password."
+  #     locked: "Your account is locked."
+  #     last_attempt: "You have one more attempt before your account is locked."
+  #     not_found_in_database: "Invalid %{authentication_keys} or password."
+  #     timeout: "Your session expired. Please sign in again to continue."
+  #     unauthenticated: "You need to sign in or sign up before continuing."
+  #     unconfirmed: "You have to confirm your email address before continuing."
+  #   mailer:
+  #     confirmation_instructions:
+  #       subject: "Confirmation instructions"
+  #     reset_password_instructions:
+  #       subject: "Reset password instructions"
+  #     unlock_instructions:
+  #       subject: "Unlock instructions"
+  #     email_changed:
+  #       subject: "Email Changed"
+  #     password_change:
+  #       subject: "Password Changed"
+  #   omniauth_callbacks:
+  #     failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
+  #     success: "Successfully authenticated from %{kind} account."
+  #   passwords:
+  #     no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
+  #     send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
+  #     send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
+  #     updated: "Your password has been changed successfully. You are now signed in."
+  #     updated_not_active: "Your password has been changed successfully."
+  #   registrations:
+  #     destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
+  #     signed_up: "Welcome! You have signed up successfully."
+  #     signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
+  #     signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
+  #     signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please follow the link to activate your account."
+  #     update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirm link to confirm your new email address."
+  #     updated: "Your account has been updated successfully."
+  #   sessions:
+  #     signed_in: "Signed in successfully."
+  #     signed_out: "Signed out successfully."
+  #     already_signed_out: "Signed out successfully."
+  #   unlocks:
+  #     send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
+  #     send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
+  #     unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+  # errors:
+  #   messages:
+  #     already_confirmed: "was already confirmed, please try signing in"
+  #     confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
+  #     expired: "has expired, please request a new one"
+  #     not_found: "not found"
+  #     not_locked: "was not locked"
+  #     not_saved:
+  #       one: "1 error prohibited this %{resource} from being saved:"
+  #       other: "%{count} errors prohibited this %{resource} from being saved:"

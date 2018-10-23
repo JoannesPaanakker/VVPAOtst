@@ -104,6 +104,7 @@ ActiveRecord::Schema.define(version: 20181022105731) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "first_name"
+    t.string "tussenvoegsel"
     t.string "last_name"
     t.string "initials"
     t.string "street"
@@ -111,18 +112,21 @@ ActiveRecord::Schema.define(version: 20181022105731) do
     t.string "number_extension"
     t.string "postalcode"
     t.string "city"
-    t.string "country"
     t.string "phonenumber"
+    t.date "dob"
+    t.string "big"
     t.string "practice_name"
     t.string "practice_street"
     t.integer "practice_streetnumber"
     t.string "practice_number_extension"
     t.string "practice_postalcode"
     t.string "practice_city"
-    t.string "practice_country"
     t.string "practice_email"
     t.string "practice_phonenumber"
     t.string "website"
+    t.boolean "contract"
+    t.boolean "buddy"
+    t.text "training_suggestion"
     t.boolean "admin", default: false
     t.boolean "member", default: false
     t.string "profile_image_filename"

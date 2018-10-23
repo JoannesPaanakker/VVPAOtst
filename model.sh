@@ -26,3 +26,5 @@ rails g model bestuur role:string
 
 rails g model link url:string description:string
 rails g model category description:string
+
+rails g controller users

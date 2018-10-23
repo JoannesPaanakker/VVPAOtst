@@ -136,7 +136,6 @@ users = User.create([
     number_extension: '',
     postalcode: '',
     city: '',
-    country: 'NL',
     phonenumber: '',
     practice_name: '',
     practice_street: '',
@@ -144,7 +143,6 @@ users = User.create([
     practice_number_extension: '',
     practice_postalcode: '',
     practice_city: '',
-    practice_country: '',
     practice_email: '',
     practice_phonenumber: '',
     website: '',
@@ -167,7 +165,6 @@ users = User.create([
     number_extension: '',
     postalcode: '',
     city: '',
-    country: '',
     phonenumber: '',
     practice_name: '',
     practice_street: '',
@@ -175,7 +172,6 @@ users = User.create([
     practice_number_extension: '',
     practice_postalcode: '',
     practice_city: '',
-    practice_country: '',
     practice_email: '',
     practice_phonenumber: '',
     website: '',
@@ -198,7 +194,6 @@ users = User.create([
     number_extension: '',
     postalcode: '',
     city: '',
-    country: '',
     phonenumber: '',
     practice_name: '',
     practice_street: '',
@@ -206,7 +201,6 @@ users = User.create([
     practice_number_extension: '',
     practice_postalcode: '',
     practice_city: '',
-    practice_country: '',
     practice_email: '',
     practice_phonenumber: '',
     website: '',
@@ -229,7 +223,6 @@ users = User.create([
     number_extension: '3',
     postalcode: '1078AZ',
     city: 'Amsterdam',
-    country: 'NL',
     phonenumber: '123456798',
     practice_name: '',
     practice_street: '',
@@ -237,7 +230,6 @@ users = User.create([
     practice_number_extension: '',
     practice_postalcode: '',
     practice_city: '',
-    practice_country: '',
     practice_email: '',
     practice_phonenumber: '',
     website: '',
@@ -260,7 +252,6 @@ users = User.create([
     number_extension: 'I',
     postalcode: '1234AZ',
     city: 'Den Haag',
-    country: 'NL',
     phonenumber: '987654321',
     practice_name: '',
     practice_street: '',
@@ -268,7 +259,6 @@ users = User.create([
     practice_number_extension: '',
     practice_postalcode: '',
     practice_city: '',
-    practice_country: '',
     practice_email: '',
     practice_phonenumber: '',
     website: '',
@@ -291,7 +281,6 @@ users = User.create([
     number_extension: '',
     postalcode: '9874gf',
     city: 'Lutjenbroek',
-    country: 'NL',
     phonenumber: '654987321',
     practice_name: '',
     practice_street: '',
@@ -299,7 +288,6 @@ users = User.create([
     practice_number_extension: '',
     practice_postalcode: '',
     practice_city: '',
-    practice_country: '',
     practice_email: '',
     practice_phonenumber: '',
     website: '',
@@ -423,6 +411,14 @@ De VVPAO wordt voorts financieel ondersteund door verschillende farmaceutische i
     name: 'tekstintro2',
     text: 'De VVPAO verspreid relevante informatie per mail onder haar leden en probeert antwoorden te vinden op vragen van haar leden.'
   },
+  {
+    name: 'Secretariaat',
+    text: 'Winja Leuijerink,<br>Henriëtte Roland Holststraat 19<br>1064TS Amsterdam<br>'
+  },
+  {
+    name: 'email secretariaat',
+    text: 'info@vvpao.amsterdam'
+  }
 ])
 
 listitems = Listitem.create([

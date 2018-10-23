@@ -1,0 +1,47 @@
+<% if current_user.member  %>
+  <div id="index" class="page-header header1">
+    Ledenlijst VVPAO
+  </div>
+  <div class="development">
+    developer info: <br />
+    <% if current_user %>
+      current_user: <%= current_user.email  %>
+      admin: <%= current_user.admin %>
+    <% else %>
+      no user logged in
+    <% end %>
+  </div>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="col-xs-12 user-card-outer">
+        <% @users.each do |u| %>
+          <div class="user-card">
+            <% if u.profile_image_filename %>
+              <%= image_tag( u.profile_image_filename , class: "user-image", alt: "Foto persoon")  %>
+            <% else %>
+              <%= image_tag( "user-default.png" , class: "user-image", alt: "Foto persoon")  %>
+            <% end %>
+            <div class="user-card-text-1">
+              <%= u.first_name %> <%= u.tussenvoegsel %> <%= u.last_name  %>
+            </div>
+            <div class="user-card-text-2">
+              <%= u.email %><br>
+              expertise: <%= u.expertise.name %><br>
+              tel. nr. <%= u.phonenumber %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="col-xs-12 col-md-6 home-box">
+        <p>
+          Uw lidmaatschapsaanvraag is in behandeling
+        </p>
+      </div>
+    </div>
+  </div>
+<% end %>

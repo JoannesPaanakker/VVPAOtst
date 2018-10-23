@@ -10,6 +10,12 @@ Rails.application.routes.draw do
   get 'nieuws', to: 'pages#nieuws'
   get 'contact', to: 'pages#contact'
   get 'apply', to: 'pages#apply'
+
+  resources :users, only: [:show, :index]
+
+  # devise_scope :user do
+  #   get '/signout', to: 'devise/sessions#destroy', as: :signout
+  # end
 end
 
 
