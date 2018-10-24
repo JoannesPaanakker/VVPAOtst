@@ -1,0 +1,13 @@
+<%= simple_form_for(@newsitem, as: @newsitem, url: newsitem_path(@newsitem.id), html: { method: :put }, wrapper: :horizontal_form) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title, label: "Kop"%>
+    <%= f.input :content, label: "Text" %>
+    <%= f.input :imagefilename1, label: "image bestandsnaam" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Bewaar", class: "knop" %>
+  </div>
+<% end %>

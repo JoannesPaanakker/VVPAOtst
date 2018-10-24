@@ -23,3 +23,10 @@ cancel_user_registration GET    /users/cancel(.:format)        devise/registrati
                   nieuws GET    /nieuws(.:format)              pages#nieuws
                  contact GET    /contact(.:format)             pages#contact
                    apply GET    /apply(.:format)               pages#apply
+                   users GET    /users(.:format)               users#index
+                    user GET    /users/:id(.:format)           users#show
+                         PATCH  /users/:id(.:format)           users#update
+                         PUT    /users/:id(.:format)           users#update
+               newsitems POST   /newsitems(.:format)           newsitems#create
+                newsitem PATCH  /newsitems/:id(.:format)       newsitems#update
+                         PUT    /newsitems/:id(.:format)       newsitems#update

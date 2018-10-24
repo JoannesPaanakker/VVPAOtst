@@ -15,6 +15,9 @@ Targetaudience.destroy_all
 
 targetaudiences = Targetaudience.create([
   {
+    name: 'Niet specifiek'
+  },
+  {
     name: 'kinderen & jongeren'
   },
   {
@@ -26,6 +29,9 @@ targetaudiences = Targetaudience.create([
 ])
 
 expertises = Expertise.create([
+  {
+    name: 'Geen'
+  },
   {
     name: 'ADHD'
   },
@@ -152,7 +158,7 @@ users = User.create([
     newregistrations: true,
     waitingperiod: '',
     expertise_id: expertises[5].id,
-    targetaudience_id: targetaudiences[0].id
+    targetaudience_id: targetaudiences[2].id
   },
   {
     email: 'bestuurslidjokhoe@vvpao.amsterdam',
@@ -181,7 +187,7 @@ users = User.create([
     newregistrations: true,
     waitingperiod: '',
     expertise_id: expertises[5].id,
-    targetaudience_id: targetaudiences[0].id
+    targetaudience_id: targetaudiences[1].id
   },
   {
     email: 'penningmeester@vvpao.amsterdam',
@@ -210,7 +216,7 @@ users = User.create([
     newregistrations: true,
     waitingperiod: '',
     expertise_id: expertises[5].id,
-    targetaudience_id: targetaudiences[0].id
+    targetaudience_id: targetaudiences[3].id
   },
   {
     email: 'admin@vvpao.ams',
@@ -239,7 +245,7 @@ users = User.create([
     newregistrations: true,
     waitingperiod: '',
     expertise_id: expertises[5].id,
-    targetaudience_id: targetaudiences[0].id
+    targetaudience_id: targetaudiences[2].id
   },
   {
     email: 'user@vvpao.ams',
@@ -296,6 +302,8 @@ users = User.create([
     profile_image_filename: '',
     newregistrations: false,
     waitingperiod: '',
+    expertise_id: expertises[8].id,
+    targetaudience_id: targetaudiences[1].id
   }
 ])
 

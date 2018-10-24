@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181022105731) do
+ActiveRecord::Schema.define(version: 20181024094211) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -134,6 +134,8 @@ ActiveRecord::Schema.define(version: 20181022105731) do
     t.string "waitingperiod"
     t.bigint "expertise_id"
     t.bigint "targetaudience_id"
+    t.boolean "personal_data_public", default: false
+    t.boolean "practice_data_public", default: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["expertise_id"], name: "index_users_on_expertise_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

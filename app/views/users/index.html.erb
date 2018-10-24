@@ -28,6 +28,7 @@
               <%= u.email %><br>
               expertise: <%= u.expertise.name %><br>
               tel. nr. <%= u.phonenumber %>
+              <%= link_to 'details', user_path(u.id), class: 'knop-small knop-rechtsonder-user-card' %>
             </div>
           </div>
         <% end %>

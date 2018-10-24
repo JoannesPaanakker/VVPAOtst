@@ -22,7 +22,9 @@ class NewsitemsController < ApplicationController
   end
 
   def update
-
+    @newsitem = Newsitem.find(params[:id])
+    @newsitem.update!(newsitem_params)
+    redirect_to root_path
   end
 
   def delete
@@ -32,6 +34,6 @@ class NewsitemsController < ApplicationController
   private
 
   def newsitem_params
-    params.permit(:user_id, :title, :content, :imagefilename1)
+    params.require(:newsitem).permit(:title, :content, :imagefilename1)
   end
 end

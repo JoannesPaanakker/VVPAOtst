@@ -1,0 +1,21 @@
+<%= simple_form_for(@user, url: user_path(@user), html: { method: :put }, wrapper: :horizontal_form) do |f| %>
+
+  <div class="form-inputs">
+    <%= f.input :email, required: true, autofocus: true %>
+    <%= f.input :first_name, label: "Voornaam"%>
+    <%= f.input :tussenvoegsel %>
+    <%= f.input :last_name, label: "Achternaam" %>
+    <%= f.input :initials, label: "Initialen" %>
+    <%= f.input :street, label: "Straat"  %>
+    <%= f.input :streetnumber, label: "Huisnr."  %>
+    <%= f.input :number_extension, label: "toevoeging" %>
+    <%= f.input :postalcode, label: "Postcode"  %>
+    <%= f.input :city, label: "Stad"  %>
+    <%= f.input :phonenumber, label: "Tel. nummer"  %>
+    <%= f.input :big, label: "BIG-nummer", required: false  %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Bewaar", class: "knop" %>
+  </div>
+<% end %>

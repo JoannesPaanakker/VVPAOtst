@@ -46,8 +46,18 @@
  width: 300px;
  padding: 10px 10px 10px 30px;
  font-size: 14px;
+ position: relative;
 }
 
+.knop-rechtsonder-user-card {
+  position: absolute;
+  right: 0px;
+  bottom: 5px;
+}
+
+.public {
+  color: $red;
+}
 
 @media screen and (min-width: 601px) {
 

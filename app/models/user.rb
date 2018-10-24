@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   belongs_to :expertise
-  has_one :targetaudience
+  belongs_to :targetaudience
   has_one :bestuur
   has_many :newsitems
   has_many :usertrainings

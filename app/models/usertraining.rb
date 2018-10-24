@@ -1,4 +1,4 @@
 class Usertraining < ApplicationRecord
-  has_one :User
-  has_one :training
+  belongs_to :User
+  belongs_to :training
 end

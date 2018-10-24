@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
   get 'apply', to: 'pages#apply'
 
-  resources :users, only: [:show, :index]
+  resources :users, only: [:show, :index, :update]
+  resources :newsitems, only: [:create, :update, :delete]
 
   # devise_scope :user do
   #   get '/signout', to: 'devise/sessions#destroy', as: :signout

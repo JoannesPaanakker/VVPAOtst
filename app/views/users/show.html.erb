@@ -1,34 +1,131 @@
 
 <% if current_user.member  %>
   <div id="profile" class="page-header header1">
-    Gegevens van <%= @user.first_name %> <%= @user.last_name %>
+    Gegevens van <%= @user.first_name %> <%= @user.initials %> <%= @user.tussenvoegsel %> <%= @user.last_name %>
   </div>
   <div class="container-fluid">
     <div class="row-fluid">
       <div class="col-xs-12 col-md-6 home-box">
         <div class="home-inner-box">
           <div class="header1">Persoonlijke gegevens</div>
-          <div class="text-box-l">
-
+          <div class="public">
+            <% if @user.personal_data_public %>
+              Openbaar (zichtbaar voor publiek)
+            <% else %>
+              Niet Openbaar (alleen zichtbaar voor leden)
+            <% end %>
           </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-md-6 home-box">
-        <div class="home-inner-box">
-          <div class="header1">Professionele gegevens</div>
           <div class="text-box-l">
-
+            <%= @user.street %> <%= @user.streetnumber %> <%= @user.number_extension %><br>
+            <%= @user.postalcode %> <%= @user.city %><br>
+            <br>
+            <%= @user.email %> <br>
+            Tel. nr. <%= @user.phonenumber %><br>
+            BIG: <%= @user.big %><br>
           </div>
+          <% if @user == current_user %>
+            <div class="knop" data-toggle="modal" data-target="#editPersonal">
+              Edit
+            </div>
+            <!-- Edit modal -->
+            <div class="modal fade" id="editPersonal" tabindex="-1" role="dialog" aria-labelledby="editPersonalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="editPersonalLabel">Pas persoonlijke gegevens aan</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <%= render 'partials/edit-personal' %>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="knop" data-dismiss="modal">annuleer</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
         </div>
       </div>
       <div class="col-xs-12 col-md-6 home-box">
         <div class="home-inner-box">
           <div class="header1">Praktijk gegevens</div>
-          <div class="text-box-l">
-
+          <div class="public">
+            <% if @user.practice_data_public %>
+              Openbaar (zichtbaar voor publiek)
+            <% else %>
+              Niet Openbaar (alleen zichtbaar voor leden)
+            <% end %>
           </div>
+          <div class="text-box-l">
+            Expertise: <%= @user.expertise.name %><br>
+            <br>
+            Patientengroep: <%= @user.targetaudience.name %><br>
+            Website: <%= link_to @user.website, @user.website %> <br>
+            <%= @user.practice_name %><br>
+            <%= @user.practice_street %> <%= @user.practice_streetnumber %> <%= @user.practice_number_extension %><br>
+            <%= @user.practice_postalcode %> <%= @user.practice_city %><br>
+            <br>
+            <%= @user.practice_email %> <br>
+            Tel. nr. <%= @user.practice_phonenumber %><br>
+            <br>
+            <% if @user.newregistrations %>
+              Wachttijd voor nieuwe patienten:  <%= @user.waitingperiod %> <br>
+            <% else %>
+              Er worden (voorlopig) geen nieuwe patienten aangenomen
+            <% end %>
+          </div>
+          <% if @user == current_user %>
+            <div class="knop" data-toggle="modal" data-target="#editPractice">
+              Edit
+            </div>
+            <!-- Edit modal -->
+            <div class="modal fade" id="editPractice" tabindex="-1" role="dialog" aria-labelledby="editPracticeLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="editPracticeLabel">Pas praktijkgegevens aan</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <%= render 'partials/edit-practice' %>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="knop" data-dismiss="modal">annuleer</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <% end %>
         </div>
       </div>
+      <% if @user == current_user %>
+        <div class="col-xs-12 col-md-6 home-box">
+          <div class="home-inner-box">
+            <div class="header1">Overige gegevens</div>
+            <div class="public">
+              Alleen zichtbaar voor <%= @user.first_name %> <%= @user.initials %> <%= @user.tussenvoegsel %> <%= @user.last_name %> en het bestuur van de VVPAO.
+            </div>
+            <div class="text-box-l">
+              Tip voor nascholing: <%= @user.training_suggestion %> <br>
+              Contract met verzekeraar: <%= @user.contract %> <br>
+              Behoefte aan begeleiding door collega: <%= @user.buddy %> <br>
+              Gevolgde nascholing:<br>
+              <ul>
+                <% @usertrainings.each do |ut| %>
+                  <li>
+                    <%= ut.training.title %>, van <%= ut.training.start_date %> tot <%= ut.training.end_date %>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 <% else %>

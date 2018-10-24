@@ -38,62 +38,44 @@ body {
   font-family: $headers-font;
 }
 
-@media screen and (min-width: 601px) {
-  body {
-   font-size: 16px;
-  }
-
-  .header1 {
-    font-size: 25px;
-  }
-
-  .header2 {
-    font-size: 20px;
-  }
-
-  .knop {
-    width: 150px;
-    height: 35px;
-    box-shadow: -4px 4px $green2;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  body {
-   font-size: 14px;
-  }
-
-  .header1 {
-    font-size: 24px;
-  }
-
-  .header2 {
-    font-size: 18px;
-  }
-
-  .knop {
-    width: 100px;
-    height: 22px;
-    box-shadow: -2px 2px $green2;
-  }
-}
-
 .knop {
   text-align: center;
-  color: $pdark;
-  background: $green3;
-  // border: 2px solid $green1;
+  color: $plight;
+  background: $vvpao3;
+  // border: 2px solid $vvpao1;
   // border-radius: 6px;
 }
 
 .knop:hover {
-  background: $green4;
+  background: $vvpao4;
   color: $pdark;
 }
 
 .knop:active {
-  background: $green4;
-  box-shadow:  -2px 2px $green2;
+  background: $vvpao4;
+  box-shadow:  -2px 2px $vvpao2;
+  transform: translateY(2px) translateX(-2px);
+}
+
+.knop-small {
+  width: 60px;
+  height: 22px;
+  box-shadow: -2px 2px $vvpao2;
+  text-align: center;
+  color: $plight;
+  background: $vvpao3;
+  // border: 2px solid $vvpao1;
+  // border-radius: 6px;
+}
+
+.knop-small:hover {
+  background: $vvpao4;
+  color: $pdark;
+}
+
+.knop-small:active {
+  background: $vvpao4;
+  box-shadow:  -2px 2px $vvpao2;
   transform: translateY(2px) translateX(-2px);
 }
 
@@ -123,4 +105,44 @@ body {
 
 .border {
   border: solid 1px black;
+}
+
+@media screen and (min-width: 601px) {
+  body {
+   font-size: 16px;
+  }
+
+  .header1 {
+    font-size: 25px;
+  }
+
+  .header2 {
+    font-size: 20px;
+  }
+
+  .knop {
+    width: 150px;
+    height: 35px;
+    box-shadow: -4px 4px $vvpao2;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+   font-size: 14px;
+  }
+
+  .header1 {
+    font-size: 24px;
+  }
+
+  .header2 {
+    font-size: 18px;
+  }
+
+  .knop {
+    width: 100px;
+    height: 22px;
+    box-shadow: -2px 2px $vvpao2;
+  }
 }
