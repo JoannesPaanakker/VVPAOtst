@@ -1,5 +1,5 @@
 {
-  "name": "VVPAO",
+  "name": "VVPAOtst",
   "private": true,
   "dependencies": {
     "@rails/webpacker": "3.5",
