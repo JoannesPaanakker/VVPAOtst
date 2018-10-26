@@ -6,11 +6,15 @@ Rails.application.routes.draw do
   get 'nascholing', to: 'pages#nascholing'
   get 'psychiaters', to: 'pages#psychiaters'
   get 'lidmaatschap', to: 'pages#lidmaatschap'
-  get 'klachten', to: 'pages#klachten'
+  get 'klacht', to: 'pages#klachten'
   get 'nieuws', to: 'pages#nieuws'
   get 'contact', to: 'pages#contact'
   get 'apply', to: 'pages#apply'
 
   resources :users, only: [:show, :index, :update]
   resources :newsitems, only: [:create, :update, :delete]
+
+  comfy_route :cms_admin, path: "/admin"
+  # Ensure that this route is defined last
+  comfy_route :cms, path: "/"
 end

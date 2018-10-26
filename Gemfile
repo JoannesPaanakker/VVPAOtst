@@ -17,6 +17,8 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'bootsnap', require: false
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem "comfortable_mexican_sofa", "~> 2.0.0"
 
 group :development do
   gem 'web-console', '>= 3.3.0'
