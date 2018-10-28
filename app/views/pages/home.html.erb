@@ -34,13 +34,9 @@
       <div class="home-inner-box">
         <div class="inner-box">
           <div class="header2">Nascholing</div>
-        <ul>
-        <% @trainings.each do |tr| %>
-            <li> <div class="header2"><%= tr.title %></div>
-organiser:
-              <%= tr.user.first_name %> <%= tr.user.last_name %>  </li>
-        <% end %>
-      </ul>
+          <ul>
+            <%= render 'partials/list-trainings' %>
+          </ul>
         </div>
       </div>
     </div>

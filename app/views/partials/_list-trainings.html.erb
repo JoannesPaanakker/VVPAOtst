@@ -1,0 +1,6 @@
+<% @trainings.each do |tr| %>
+    <li> <div class="header2"><%= tr.title %></div>
+      organiser:
+      <%= tr.user.first_name %> <%= tr.user.last_name %>
+    </li>
+<% end %>
